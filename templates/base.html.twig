@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        {% block stylesheets %}
+            <style>
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    background-color: #333;
+                }
+
+                li {
+                    float: left;
+                }
+
+                li a {
+                    display: block;
+                    color: white;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                }
+
+                li a:hover {
+                    background-color: #111;
+                }
+            </style>
+
+        {% endblock %}
+
+        {% block javascripts %}
+        {% endblock %}
+
+    </head>
+    <body>
+
+    <ul>
+        <li><a class="navbar-brand font-weight-bold text-dark" href="{{ path('app_homepage') }}">Homepage</a></li>
+        <li><a class="nav-link text-black-50 mr-3" href="{{ path('login') }}">Log In</a></li>
+        <li> <a href="{{ path('app_register') }}" class="btn btn-dark">Sign up</a></li>
+    </ul>
+
+    {% block body %}{% endblock %}
+    </body>
+</html>
